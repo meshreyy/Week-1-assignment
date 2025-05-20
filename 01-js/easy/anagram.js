@@ -8,7 +8,33 @@
 */
 
 function isAnagram(str1, str2) {
+   if (str1.length !== str2.length) return false;
 
+ 
+ 
+  for (let i = 0; i < str1.length; i++) {
+    let count = str1[i];
+     let found = false;
+    
+      for(let i=0;i<str2.length;i++)
+        {
+          if(str2[i]==count)
+          {
+            
+            found=true;
+            break;
+          }
+        }
+   if (!found) {
+        return false; 
+      }
+    }
+    return true; 
+  
 }
 
-module.exports = isAnagram;
+var letsCheck = isAnagram("spar","rasp")
+console.log(letsCheck);
+
+
+//module.exports = isAnagram;
