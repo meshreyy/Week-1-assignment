@@ -7,7 +7,26 @@
 */
 
 function isPalindrome(str) {
-  return true;
+   var normal = str.toUpperCase();
+  //normalized
+  
+  //reversed
+  var convert = str.toUpperCase();
+  convert = convert.split('').reverse().join('');
+  
+  
+
+  if(normal==convert)
+  {
+    return true;
+  }
+  else
+  {
+    return false;  
+  }
 }
+
+var answer = isPalindrome("Nan");
+console.log(answer);
 
 module.exports = isPalindrome;
